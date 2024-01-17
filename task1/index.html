@@ -24,46 +24,51 @@
 
         <h1>Задание 1 - Преобразовать XML в JS-объект</h1>
 
-        <p>Вам дана заготовка и результат, который вы должны получить. Ваша задача — написать код, который будет преобразовывать XML в JS-объект и выводить его в консоль.</p>
+        <p>Вам дана заготовка и результат, который вы должны получить. 
+            Ваша задача — написать код, который будет преобразовывать 
+            XML в JS-объект и выводить его в консоль.
+        </p>
+        <br>
+        <p>XML:</p>
 
-        <div class="section-cards">
-            <div class="card">
-                <p>XML:</p>
-                <div style="background: #f8f8f8; overflow: auto; width: auto; border: solid #d1d9d7; border-width: .1em; padding: .2em .6em;">
-                    <pre style="margin: 0; line-height: 125%;" class="hljs language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">student</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">name</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span>&gt;</span>
-                          <span class="hljs-tag">&lt;<span class="hljs-name">first</span>&gt;</span>Ivan<span class="hljs-tag">&lt;/<span class="hljs-name">first</span>&gt;</span>
-                          <span class="hljs-tag">&lt;<span class="hljs-name">second</span>&gt;</span>Ivanov<span class="hljs-tag">&lt;/<span class="hljs-name">second</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">age</span>&gt;</span>35<span class="hljs-tag">&lt;/<span class="hljs-name">age</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">prof</span>&gt;</span>teacher<span class="hljs-tag">&lt;/<span class="hljs-name">prof</span>&gt;</span>
-                      <span class="hljs-tag">&lt;/<span class="hljs-name">student</span>&gt;</span>
-                      <span class="hljs-tag">&lt;<span class="hljs-name">student</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">name</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ru"</span>&gt;</span>
-                          <span class="hljs-tag">&lt;<span class="hljs-name">first</span>&gt;</span>Петр<span class="hljs-tag">&lt;/<span class="hljs-name">first</span>&gt;</span>
-                          <span class="hljs-tag">&lt;<span class="hljs-name">second</span>&gt;</span>Петров<span class="hljs-tag">&lt;/<span class="hljs-name">second</span>&gt;</span>
-                        <span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">age</span>&gt;</span>58<span class="hljs-tag">&lt;/<span class="hljs-name">age</span>&gt;</span>
-                        <span class="hljs-tag">&lt;<span class="hljs-name">prof</span>&gt;</span>driver<span class="hljs-tag">&lt;/<span class="hljs-name">prof</span>&gt;</span>
-                      <span class="hljs-tag">&lt;/<span class="hljs-name">student</span>&gt;</span>
-                    <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
-                   </pre>
-                </div>
-            </div>
-            <div class="card">
-                <p>JS-объект:</p>
-                <div style="background: #F8F8F8; overflow: auto; width: auto; border: solid #D1D9D7; border-width: .1em; padding: .2em .6em;">
-                    <pre style="margin: 0; line-height: 125%;" class="hljs language-json"><span class="hljs-punctuation">{</span><span class="hljs-attr">"name"</span><span class="hljs-punctuation">:</span><span class="hljs-string">"Anton"</span><span class="hljs-punctuation">,</span><span class="hljs-attr">"age"</span><span class="hljs-punctuation">:</span><span class="hljs-number">36</span><span class="hljs-punctuation">,</span><span class="hljs-attr">"skills"</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span><span class="hljs-string">"Javascript"</span><span class="hljs-punctuation">,</span><span class="hljs-string">"HTML"</span><span class="hljs-punctuation">,</span><span class="hljs-string">"CSS"</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><span class="hljs-attr">"salary"</span><span class="hljs-punctuation">:</span><span class="hljs-number">80000</span><span class="hljs-punctuation">}</span></pre>
-                </div>
-            </div>
-            <p>Ваша задача — создать JS-объект, который при преобразовании в JSON будет возвращать в качестве результата такую же JSON-строку, как в образце. Получившуюся строку вывести в консоль.</p>
+        <div class="conteiner-code" >
+<!-- --------------------- -->
+            <pre class="pre-js">
+&lt;list&gt;
+    &lt;student&gt;
+        &lt;name lang="en"&gt;
+            &lt;first&gt;Ivan&lt;/first&gt;
+            &lt;second&gt;Ivanov&lt;/second&gt;
+        &lt;/name&gt;
+        &lt;age&gt;35&lt;/age&gt;
+        &lt;prof&gt;teacher&lt;/prof&gt;
+    &lt;/student&gt;
+    &lt;student&gt;
+        &lt;name lang="ru"&gt;
+            &lt;first&gt;Петр&lt;/first&gt;
+            &lt;second&gt;Петров&lt;/second&gt;
+        &lt;/name&gt;
+        &lt;age&gt;58&lt;/age&gt;
+        &lt;prof&gt;driver&lt;/prof&gt;
+    &lt;/student&gt;
+&lt;/list&gt;</pre>
+<!-- --------------------- -->
         </div>
 
+        <p>JS-объект:</p>
 
+        <div style="background: #F8F8F8; overflow: auto; width: auto; border: solid #D1D9D7; border-width: .1em; padding: .2em .6em;">
+            <pre class="pre-js">{
+    list: [
+        { name: 'Ivan Ivanov', age: 35, prof: 'teacher', lang: 'en' },
+        { name: 'Петр Петров', age: 58, prof: 'driver', lang: 'ru' },
+    ]
+}</pre>
+        </div>
+        <p>Ваша задача — создать JS-объект, который при преобразовании в JSON будет возвращать в качестве результата такую же JSON-строку, как в образце. Получившуюся строку вывести в консоль.</p>
     </div>
+
     <script src="script.js"></script>    
+
 </body>
-
-
 </html>
