@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS-Start.  Задание 6</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="links">
+            <a href="../index.html">Главная</a>
+            <a href="../task1/index.html">Задание 1</a>
+            <a href="../task2/index.html">Задание 2</a>
+            <a href="../task3/index.html">Задание 3</a>
+            <a href="../task4/index.html">Задание 4</a>
+            <a href="../task5/index.html">Задание 5</a>
+            <a href="#">Задание 6</a>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <h1>Задание 6 - «Запрос»</h1>
+
+        <p> Есть два вводных поля и кнопка:</p>
+        <ul>
+            <li>Заголовок первого input — «номер страницы».</li>
+            <li>Заголовок второго input — «лимит».</li>
+            <li>Заголовок кнопки — «запрос». </li>
+        </ul>
+        <p>При клике на кнопку происходит следующее:</p>
+        <ul>
+            <li>Если число в первом input не попадает в диапазон от 1 до 10 или не является числом — выводится ниже текст «Номер страницы вне диапазона от 1 до 10»;</li>
+            <li>Если число во втором input не попадает в диапазон от 1 до 10 или не является числом — выводится ниже текст «Лимит вне диапазона от 1 до 10»;</li>
+            <li>Если и первый, и второй input не в диапазонах или не являются числами — выводится ниже текст «Номер страницы и лимит вне диапазона от 1 до 10»; </li>
+            <li>Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL https://picsum.photos/v2/list?page=1&limit=10, где GET-параметр page — это число из первого input, а GET-параметр limit — это введённое число второго input.</li>
+        </ul>
+        <p> После получения данных вывести список картинок на экран.</p>
+        <p>Если пользователь перезагрузил страницу, то ему должны показываться картинки 
+            из последнего успешно выполненного запроса (использовать localStorage).
+        </p>
+
+        <div class="solution">
+            <div class="input-view">
+                <label class="input-view__label" for="page"> Номер страницы (1-10):</label>
+                <input class="input-view__input" id="page" name="page" value="3">
+            </div>
+        
+            <div class="input-view">
+                <label class="input-view__label" for="limit"> Лимит (1-10):</label>
+                <input class="input-view__input" id="limit" name="limit" value="3">
+            </div>
+            
+            <button class="btn j-btn">Запрос</button>
+            <hr>
+        
+            <div class="result j-result"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
